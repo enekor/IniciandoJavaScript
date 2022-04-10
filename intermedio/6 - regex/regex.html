@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>regex</title>
+    </head>
+    <body>
+        <p>Expresiones regulares</p>
+
+        <script type="text/javascript">
+            var banda = "AC/DC"
+            var regex = /\//g
+
+            console.log(banda.search(regex))
+
+            var texto = 'Hola mundo'
+            var regex2 = /^[a-z]$/g
+            console.log(regex2.test(texto))
+
+            var texto2 = 'hola'
+            var regex3 = /a+$/
+            console.log(regex3.test(texto2))
+        </script>
+    </body>
+</html>

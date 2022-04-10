@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>eventos</title>
+    </head>
+    <body>
+        <h1>Eventos</h1>
+        <button id="cambiarFondo">Cambiar fondo</button>
+
+        <script type="text/javascript">
+            //teclado
+            document.addEventListener("keydown", function(evento){
+                console.log(evento)
+            })
+
+            //boton
+            var boton = document.getElementById('cambiarFondo')
+
+            function random(max){
+                return Math.round(Math.random()*max)
+            }
+
+            boton.addEventListener("click",function(){
+                var color = [random(255),random(255),random(255)]
+                document.body.style.backgroundColor = `rgb(${color[0]},${color[1]},${color[2]})`
+                console.log(color)
+            })
+        </script>
+    </body>
+</html>

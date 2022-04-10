@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>ejercicio junto a dom</title>
+    </head>
+    <body>
+        <h3>TODO List</h3>
+
+        <ul id="todo_list"></ul>
+
+        <input placeholder="nueva tarea" id="newTodo"></input>
+        <button id="addTodo">Nueva tarea</button>
+
+        <script type="text/javascript">
+            var todoList = document.querySelector('#todo_list')
+            var boton = document.getElementById('addTodo')
+
+            function nuevoLi(value){
+                var li = document.createElement('li')
+                li.textContent = value
+                todoList.appendChild(li)
+
+                document.getElementById('newTodo').value = ""
+            }
+
+            boton.addEventListener('click',function(){
+                var value = document.getElementById('newTodo').value
+                console.log(value)
+
+                if(value){
+                    nuevoLi(value)
+                }
+            })
+
+        </script>
+    </body>
+</html>
